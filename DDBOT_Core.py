@@ -8,6 +8,7 @@ config_cfg = "./config.cfg"
 config_raw = configparser.RawConfigParser()
 config_raw.read(config_cfg)
 debug = config_raw.get("Defaults","debug_mode")
+telepot.api.set_proxy("http://190.103.178.44:80")
 bot = telepot.Bot('1182335639:AAFxjOdmageqWMRyZvev3IGwCjXXws-Fjcc')
 print("The bot was loaded compeletly.")
 def handle(msg):
