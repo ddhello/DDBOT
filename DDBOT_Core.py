@@ -8,8 +8,8 @@ config_cfg = "./config.cfg"
 config_raw = configparser.RawConfigParser()
 config_raw.read(config_cfg)
 debug = config_raw.get("Defaults","debug_mode")
-telepot.api.set_proxy("http://190.103.178.44:80")
-bot = telepot.Bot('1182335639:AAFxjOdmageqWMRyZvev3IGwCjXXws-Fjcc')
+telepot.api.set_proxy("http://190.103.178.44:80")#此行用于解决俄罗斯VPS无法连接上TG服务器的问题，如果你的VPS在其他地区可删除
+bot = telepot.Bot('')
 print("The bot was loaded compeletly.")
 def handle(msg):
     debug = config_raw.get("Defaults", "debug_mode")
